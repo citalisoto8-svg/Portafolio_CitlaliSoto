@@ -1,0 +1,804 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f7fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+header {
+
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #2563eb
+    );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+}
+
+
+header h1 {
+
+    font-size: 3rem;
+    margin-bottom: 10px;
+
+}
+
+
+header p {
+
+    font-size: 1.3rem;
+
+    font-weight: 300;
+
+}
+
+
+
+/* =========================
+   MENÚ DE NAVEGACIÓN
+========================= */
+
+
+nav {
+
+    background-color: #111827;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    padding: 15px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+}
+
+
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    margin: 8px 15px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+
+nav a:hover {
+
+    color: #38bdf8;
+
+    transform: translateY(-3px);
+
+}
+
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+
+section {
+
+    background:white;
+
+    width: 85%;
+
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow: 
+    0 5px 20px rgba(0,0,0,0.08);
+
+}
+
+
+section h2 {
+
+    color:#2563eb;
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    font-size:2rem;
+
+}
+
+
+/* =========================
+   INICIO
+========================= */
+
+
+#inicio {
+
+    text-align:center;
+
+}
+
+
+#inicio img {
+
+    width:220px;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:6px solid #2563eb;
+
+    margin:20px;
+
+}
+
+
+
+#inicio p {
+
+    max-width:800px;
+
+    margin:15px auto;
+
+    font-size:1.1rem;
+
+}
+
+
+
+/* =========================
+   LISTAS
+========================= */
+
+
+ul {
+
+    list-style:none;
+
+}
+
+
+li {
+
+    background:#eff6ff;
+
+    margin:12px 0;
+
+    padding:12px 20px;
+
+    border-left:5px solid #2563eb;
+
+    border-radius:8px;
+
+    transition:0.3s;
+
+}
+
+
+li:hover {
+
+    transform:translateX(10px);
+
+    background:#dbeafe;
+
+}
+
+/* =========================
+   Investigaciones
+========================= */
+
+#investigaciones a {
+
+    color:#000000;
+
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    display:block;
+
+    transition:0.3s;
+
+}
+
+
+#investigaciones a:hover {
+
+    color:#1e40af;
+
+    transform:translateX(8px);
+
+}
+
+
+/* =========================
+   HABILIDADES
+========================= */
+
+
+#habilidades ul {
+
+    display:grid;
+
+    grid-template-columns:repeat(
+        auto-fit,
+        minmax(180px,1fr)
+    );
+
+    gap:15px;
+
+}
+
+
+#habilidades li {
+
+    text-align:center;
+
+}
+
+
+
+/* =========================
+   PROYECTOS
+========================= */
+
+
+article {
+
+    background:#f8fafc;
+
+    padding:25px;
+
+    margin:20px 0;
+
+    border-radius:12px;
+
+    border-top:5px solid #2563eb;
+
+    transition:0.3s;
+
+}
+
+
+article:hover {
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.1);
+
+}
+
+
+article h3 {
+
+    color:#1d4ed8;
+
+    margin-bottom:10px;
+
+}
+
+
+
+article h4 {
+
+    color:#475569;
+
+}
+
+/* =========================
+   Certificaciones
+========================= */
+
+#certificaciones a {
+
+    color:#000000;
+
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    display:block;
+
+    transition:0.3s;
+
+}
+
+
+#certificaciones a:hover {
+
+    color:#1e40af;
+
+    transform:translateX(8px);
+
+}
+
+
+
+/* =========================
+   Cursos
+========================= */
+
+#cursos a {
+
+    color:#000000;
+
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    display:block;
+
+    transition:0.3s;
+
+}
+
+
+#cursos a:hover {
+
+    color:#1e40af;
+
+    transform:translateX(8px);
+
+}
+
+
+/* =========================
+   Logros
+========================= */
+
+#logros a {
+
+    color:#000000;
+
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    display:block;
+
+    transition:0.3s;
+
+}
+
+
+#logros a:hover {
+
+    color:#1e40af;
+
+    transform:translateX(8px);
+
+}
+
+/*=========================
+ EXPERIENCIA
+==========================*/
+
+/*=========================
+ EXPERIENCIA
+==========================*/
+
+.experiencia{
+    padding:80px 20px;
+    background:#f5f7fb;
+}
+
+.experiencia .contenido-seccion{
+    max-width:900px;
+    margin:auto;
+}
+
+.experiencia h2{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:40px;
+    color:#222;
+}
+
+/*=========================
+ TARJETA
+==========================*/
+
+.acordeon{
+    background:#fff;
+    border-radius:18px;
+    margin-bottom:25px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.35s ease;
+}
+
+.acordeon:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+/*=========================
+ CABECERA
+==========================*/
+
+.acordeon-btn{
+
+    width:100%;
+    border:none;
+    outline:none;
+
+    background:#4f7cff;
+    color:#fff;
+
+    padding:22px 28px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    cursor:pointer;
+    transition:.3s;
+
+    text-align:left;
+}
+
+.acordeon-btn:hover{
+    background:#3d6df5;
+}
+
+.acordeon-btn h3{
+    margin:0;
+    font-size:22px;
+    font-weight:700;
+}
+
+.acordeon-btn span{
+    display:block;
+    margin-top:6px;
+    font-size:14px;
+    opacity:.9;
+}
+
+/*=========================
+ ICONO +
+==========================*/
+
+.icono{
+
+    width:42px;
+    height:42px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.20);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:#fff;
+    font-size:30px;
+    font-weight:bold;
+
+    transition:.35s;
+
+}
+
+.acordeon.active .icono{
+
+    transform:rotate(45deg);
+
+    background:#fff;
+    color:#4f7cff;
+
+}
+
+/*=========================
+ CONTENIDO
+==========================*/
+
+.contenido{
+
+    max-height:0;
+    overflow:hidden;
+
+    opacity:0;
+
+    padding:0 28px;
+
+    background:#fff;
+
+    transition:
+        max-height .45s ease,
+        opacity .35s ease,
+        padding .35s ease;
+
+}
+
+.acordeon.active .contenido{
+
+    max-height:700px;
+    opacity:1;
+
+    padding:25px 28px;
+
+}
+
+.contenido p{
+
+    color:#555;
+    line-height:1.8;
+    margin-bottom:20px;
+
+}
+
+/*=========================
+ LISTA
+==========================*/
+
+.contenido ul{
+
+    list-style:none;
+    padding:0;
+    margin:0;
+
+}
+
+.contenido li{
+
+    margin:12px 0;
+    color:#444;
+
+}
+
+.contenido li::before{
+
+    content:"✔";
+    color:#4f7cff;
+    font-weight:bold;
+    margin-right:10px;
+
+}
+
+/*=========================
+ TAGS
+==========================*/
+
+.tags{
+
+    margin-top:25px;
+
+}
+
+.tags span{
+
+    display:inline-block;
+
+    background:#edf3ff;
+    color:#4f7cff;
+
+    padding:8px 16px;
+    margin:6px;
+
+    border-radius:30px;
+
+    font-size:13px;
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.tags span:hover{
+
+    background:#4f7cff;
+    color:#fff;
+
+}
+
+/* =========================
+   CV
+========================= */
+
+
+#cv {
+
+    text-align:center;
+
+}
+
+
+
+#cv a {
+
+    display:inline-block;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:15px 30px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    margin-top:20px;
+
+    font-weight:bold;
+
+    transition:0.3s;
+
+}
+
+
+
+#cv a:hover {
+
+    background:#1e40af;
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* =========================
+   CONTACTO
+========================= */
+
+
+#contacto p {
+
+    text-align:center;
+
+    font-size:1.1rem;
+
+    margin:15px;
+
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+
+footer {
+
+    background:#111827;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+    margin-top:40px;
+
+}
+
+
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+
+section {
+
+    animation: aparecer 0.8s ease;
+
+}
+
+
+@keyframes aparecer {
+
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* =========================
+   RESPONSIVE CELULAR
+========================= */
+
+
+@media(max-width:768px){
+
+
+header h1{
+
+    font-size:2rem;
+
+}
+
+
+nav{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+
+section{
+
+    width:95%;
+
+    padding:25px;
+
+}
+
+
+#habilidades ul{
+
+    grid-template-columns:1fr;
+
+}
+
+
+}
