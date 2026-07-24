@@ -1,0 +1,13 @@
+# Carpeta de documentos personales
+documentos/
+
+# Carpeta de imágenes personales
+imagenes/
+
+# Archivos temporales
+*_files/
+*.descarga
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
