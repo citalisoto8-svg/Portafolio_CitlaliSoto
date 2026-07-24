@@ -1,0 +1,178 @@
+// ========================================
+// AI Email Generator
+// Script Principal
+// ========================================
+
+// Botones
+const btnGenerar = document.getElementById("btnGenerar");
+const btnCopiar = document.getElementById("copiar");
+const btnLimpiar = document.getElementById("limpiar");
+
+// Campos
+const tipo = document.getElementById("tipo");
+const nombre = document.getElementById("nombre");
+const mensaje = document.getElementById("mensaje");
+const tono = document.getElementById("tono");
+const idioma = document.getElementById("idioma");
+
+const resultado = document.getElementById("resultado");
+const loading = document.getElementById("loading");
+
+// ========================================
+// Generar correo
+// ========================================
+
+btnGenerar.addEventListener("click", async () => {
+
+    // Validación
+
+    if(destinatario.value.trim() === ""){
+
+        alert("Escribe el destinatario.");
+
+        return;
+
+    }
+
+    if(mensaje.value.trim() === ""){
+
+        alert("Escribe el mensaje.");
+
+        return;
+
+    }
+
+    // Mostrar loading
+
+    loading.style.display = "block";
+
+    btnGenerar.disabled = true;
+
+    resultado.value = "";
+
+    try{
+
+        const response = await fetch("/generar",{
+
+            method:"POST",
+
+            headers:{
+                "Content-Type":"application/json"
+            },
+
+            body:JSON.stringify({
+
+                nombre:nombre.value,
+
+                tipo:tipo.value,
+
+                destinatario:destinatario.value,
+
+                mensaje:mensaje.value,
+
+                tono:tono.value,
+
+                idioma:idioma.value
+
+            })
+
+        });
+
+        const data = await response.json();
+
+        loading.style.display="none";
+
+        btnGenerar.disabled=false;
+
+        if(data.success){
+
+            escribirTexto(data.correo);
+
+        }else{
+
+            alert(data.error);
+
+        }
+
+    }catch(error){
+
+            console.error(error);
+        alert(error);
+
+    }
+
+});
+
+
+// ========================================
+// Animación de escritura
+// ========================================
+
+function escribirTexto(texto){
+
+    resultado.value="";
+
+    let i=0;
+
+    const velocidad=15;
+
+    const escribir=setInterval(()=>{
+
+        resultado.value += texto.charAt(i);
+
+        i++;
+
+        resultado.scrollTop = resultado.scrollHeight;
+
+        if(i>=texto.length){
+
+            clearInterval(escribir);
+
+        }
+
+    },velocidad);
+
+}
+
+
+// ========================================
+// Copiar
+// ========================================
+
+btnCopiar.addEventListener("click",()=>{
+
+    if(resultado.value===""){
+
+        alert("No hay ningún correo generado.");
+
+        return;
+
+    }
+
+    navigator.clipboard.writeText(resultado.value);
+
+    alert("Correo copiado.");
+
+});
+
+
+// ========================================
+// Limpiar
+// ========================================
+
+btnLimpiar.addEventListener("click",()=>{
+    
+
+    tipo.selectedIndex=0;
+
+    destinatario.value="";
+
+    mensaje.value="";
+
+    tono.selectedIndex=0;
+
+    idioma.selectedIndex=0;
+
+    resultado.value="";
+
+});
